@@ -1,6 +1,9 @@
 import React from 'react'
 import { Button, Container, Flex,HStack,Link,Text, Tooltip} from '@chakra-ui/react'
 import { FaPlus } from "react-icons/fa";
+import { Link as RouterLink } from "react-router-dom";
+
+
 
 function Navbar() {
   
@@ -26,7 +29,7 @@ function Navbar() {
         </Text>
         <HStack spacing={2} alignItems={"center"}>
             <Tooltip label={"Create a Job"} placement={"bottom"} hasArrow arrowSize={10}>
-            <Link to={"/create"}>
+            <Link as={RouterLink} to="/jobs">
             <Button >
             <FaPlus />
             </Button>
